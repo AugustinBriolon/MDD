@@ -6,6 +6,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import ReactThree from '@react-three/eslint-plugin';
 
 const eslintConfig = [
   {
@@ -83,6 +84,7 @@ const eslintConfig = [
       'react-hooks': reactHooksPlugin,
       '@next/next': nextPlugin,
       prettier: prettierPlugin,
+      "@react-three": ReactThree,
     },
     rules: {
       ...typescriptPlugin.configs.recommended.rules,
