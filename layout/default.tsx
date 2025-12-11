@@ -7,11 +7,12 @@ import { useEnvironment } from '@/hooks/useEnvironment';
 import { useFontReady } from '@/hooks/useFontReady';
 import { usePerformance } from '@/providers/performance.provider';
 import { gsap } from 'gsap';
+import DrawSVGPlugin from 'gsap/dist/DrawSVGPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { ReactNode, useEffect } from 'react';
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { isProd } = useEnvironment();

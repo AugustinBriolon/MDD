@@ -7,6 +7,10 @@ import { ReactNode } from 'react';
 export const PageTransitionProvider = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
+  if (pathname === '/') {
+    return children;
+  }
+
   return (
     <AnimatePresence
       mode="wait"
